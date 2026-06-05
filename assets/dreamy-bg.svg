@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0533"/>
+      <stop offset="50%" style="stop-color:#2d1b69"/>
+      <stop offset="100%" style="stop-color:#1a0533"/>
+    </linearGradient>
+    
+    <radialGradient id="bubble" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(255,182,193,0.6)"/>
+      <stop offset="100%" style="stop-color:rgba(135,206,235,0.2)"/>
+    </radialGradient>
+    
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(168,85,247,0.8)"/>
+      <stop offset="100%" style="stop-color:rgba(168,85,247,0)"/>
+    </radialGradient>
+    
+    <style>
+      @keyframes float-up {
+        0% { transform: translateY(200px) scale(0.5); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.6; }
+        100% { transform: translateY(-50px) scale(1.2); opacity: 0; }
+      }
+      
+      @keyframes fall-down {
+        0% { transform: translateY(-30px) rotate(0deg) scale(0.8); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.7; }
+        100% { transform: translateY(230px) rotate(360deg) scale(0.6); opacity: 0; }
+      }
+      
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      
+      @keyframes float-around {
+        0% { transform: translate(0, 0); opacity: 0.6; }
+        25% { transform: translate(30px, -20px); opacity: 0.9; }
+        50% { transform: translate(-20px, 10px); opacity: 0.5; }
+        75% { transform: translate(15px, 25px); opacity: 0.8; }
+        100% { transform: translate(0, 0); opacity: 0.6; }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); opacity: 0.6; }
+        50% { transform: scale(1.5); opacity: 0.9; }
+      }
+      
+      @keyframes shimmer {
+        0% { opacity: 0; transform: translateX(-100px); }
+        50% { opacity: 0.8; }
+        100% { opacity: 0; transform: translateX(100px); }
+      }
+      
+      .bubble {
+        animation: float-up linear infinite;
+      }
+      
+      .petal {
+        animation: fall-down linear infinite;
+      }
+      
+      .star {
+        animation: twinkle ease-in-out infinite;
+      }
+      
+      .sparkle {
+        animation: float-around ease-in-out infinite;
+      }
+      
+      .light {
+        animation: pulse ease-in-out infinite;
+      }
+      
+      .shimmer-line {
+        animation: shimmer ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bg)"/>
+  
+  <!-- Shimmer effect -->
+  <line x1="0" y1="100" x2="800" y2="100" stroke="rgba(255,182,193,0.1)" stroke-width="1" class="shimmer-line" style="animation-duration: 4s;"/>
+  <line x1="0" y1="60" x2="800" y2="60" stroke="rgba(78,205,196,0.1)" stroke-width="1" class="shimmer-line" style="animation-duration: 5s; animation-delay: 1s;"/>
+  <line x1="0" y1="140" x2="800" y2="140" stroke="rgba(168,85,247,0.1)" stroke-width="1" class="shimmer-line" style="animation-duration: 6s; animation-delay: 2s;"/>
+  
+  <!-- Bubbles -->
+  <circle cx="80" cy="200" r="12" fill="url(#bubble)" class="bubble" style="animation-duration: 6s; animation-delay: 0s;"/>
+  <circle cx="200" cy="200" r="8" fill="url(#bubble)" class="bubble" style="animation-duration: 8s; animation-delay: 1s;"/>
+  <circle cx="350" cy="200" r="15" fill="url(#bubble)" class="bubble" style="animation-duration: 7s; animation-delay: 2s;"/>
+  <circle cx="500" cy="200" r="10" fill="url(#bubble)" class="bubble" style="animation-duration: 9s; animation-delay: 0.5s;"/>
+  <circle cx="650" cy="200" r="13" fill="url(#bubble)" class="bubble" style="animation-duration: 6.5s; animation-delay: 3s;"/>
+  <circle cx="750" cy="200" r="9" fill="url(#bubble)" class="bubble" style="animation-duration: 7.5s; animation-delay: 1.5s;"/>
+  <circle cx="150" cy="200" r="11" fill="url(#bubble)" class="bubble" style="animation-duration: 8.5s; animation-delay: 2.5s;"/>
+  <circle cx="450" cy="200" r="7" fill="url(#bubble)" class="bubble" style="animation-duration: 5.5s; animation-delay: 4s;"/>
+  
+  <!-- Petals -->
+  <ellipse cx="120" cy="0" rx="8" ry="12" fill="#ffb6c1" opacity="0.8" class="petal" style="animation-duration: 8s; animation-delay: 0s;" transform="rotate(30, 120, 0)"/>
+  <ellipse cx="280" cy="0" rx="10" ry="14" fill="#ff69b4" opacity="0.7" class="petal" style="animation-duration: 10s; animation-delay: 2s;" transform="rotate(-20, 280, 0)"/>
+  <ellipse cx="420" cy="0" rx="7" ry="11" fill="#ffc0cb" opacity="0.9" class="petal" style="animation-duration: 9s; animation-delay: 1s;" transform="rotate(45, 420, 0)"/>
+  <ellipse cx="580" cy="0" rx="9" ry="13" fill="#ffb6c1" opacity="0.6" class="petal" style="animation-duration: 11s; animation-delay: 3s;" transform="rotate(-35, 580, 0)"/>
+  <ellipse cx="720" cy="0" rx="11" ry="15" fill="#ff69b4" opacity="0.8" class="petal" style="animation-duration: 7s; animation-delay: 1.5s;" transform="rotate(25, 720, 0)"/>
+  <ellipse cx="200" cy="0" rx="6" ry="10" fill="#ffc0cb" opacity="0.7" class="petal" style="animation-duration: 12s; animation-delay: 4s;" transform="rotate(-40, 200, 0)"/>
+  <ellipse cx="660" cy="0" rx="8" ry="12" fill="#ffb6c1" opacity="0.9" class="petal" style="animation-duration: 8.5s; animation-delay: 2.5s;" transform="rotate(50, 660, 0)"/>
+  
+  <!-- Stars -->
+  <polygon points="50,30 53,40 63,40 55,46 58,56 50,50 42,56 45,46 37,40 47,40" fill="#ffd700" class="star" style="animation-duration: 2s; animation-delay: 0s;"/>
+  <polygon points="250,50 253,60 263,60 255,66 258,76 250,70 242,76 245,66 237,60 247,60" fill="#ffffff" class="star" style="animation-duration: 1.5s; animation-delay: 0.5s;"/>
+  <polygon points="450,25 453,35 463,35 455,41 458,51 450,45 442,51 445,41 437,35 447,35" fill="#ffd700" class="star" style="animation-duration: 2.5s; animation-delay: 1s;"/>
+  <polygon points="650,45 653,55 663,55 655,61 658,71 650,65 642,71 645,61 637,55 647,55" fill="#ffffff" class="star" style="animation-duration: 1.8s; animation-delay: 0.3s;"/>
+  <polygon points="350,70 353,80 363,80 355,86 358,96 350,90 342,96 345,86 337,80 347,80" fill="#ffd700" class="star" style="animation-duration: 2.2s; animation-delay: 1.5s;"/>
+  <polygon points="550,35 553,45 563,45 555,51 558,61 550,55 542,61 545,51 537,45 547,45" fill="#ffffff" class="star" style="animation-duration: 1.7s; animation-delay: 0.8s;"/>
+  
+  <!-- Sparkles -->
+  <circle cx="100" cy="80" r="3" fill="url(#glow)" class="sparkle" style="animation-duration: 5s; animation-delay: 0s;"/>
+  <circle cx="300" cy="120" r="4" fill="url(#glow)" class="sparkle" style="animation-duration: 6s; animation-delay: 1s;"/>
+  <circle cx="500" cy="60" r="3" fill="url(#glow)" class="sparkle" style="animation-duration: 4s; animation-delay: 2s;"/>
+  <circle cx="700" cy="100" r="5" fill="url(#glow)" class="sparkle" style="animation-duration: 7s; animation-delay: 0.5s;"/>
+  <circle cx="200" cy="150" r="4" fill="url(#glow)" class="sparkle" style="animation-duration: 5.5s; animation-delay: 3s;"/>
+  <circle cx="600" cy="40" r="3" fill="url(#glow)" class="sparkle" style="animation-duration: 6.5s; animation-delay: 1.5s;"/>
+  <circle cx="400" cy="170" r="4" fill="url(#glow)" class="sparkle" style="animation-duration: 4.5s; animation-delay: 2.5s;"/>
+  
+  <!-- Lights -->
+  <circle cx="150" cy="100" r="2" fill="#ff6b9d" class="light" style="animation-duration: 3s; animation-delay: 0s;"/>
+  <circle cx="350" cy="80" r="2" fill="#4ecdc4" class="light" style="animation-duration: 2.5s; animation-delay: 0.5s;"/>
+  <circle cx="550" cy="120" r="2" fill="#a855f7" class="light" style="animation-duration: 3.5s; animation-delay: 1s;"/>
+  <circle cx="750" cy="90" r="2" fill="#ff6b9d" class="light" style="animation-duration: 2.8s; animation-delay: 1.5s;"/>
+  <circle cx="250" cy="140" r="2" fill="#4ecdc4" class="light" style="animation-duration: 3.2s; animation-delay: 2s;"/>
+  <circle cx="650" cy="70" r="2" fill="#a855f7" class="light" style="animation-duration: 2.7s; animation-delay: 0.8s;"/>
+  
+  <!-- Text -->
+  <text x="400" y="95" font-family="'Fira Code', monospace" font-size="28" fill="#ffffff" text-anchor="middle" style="filter: drop-shadow(0 0 10px rgba(168,85,247,0.5));">
+    ✨ Hi there, I'm jing1312! ✨
+  </text>
+  <text x="400" y="125" font-family="'Fira Code', monospace" font-size="16" fill="#ffb6c1" text-anchor="middle" style="filter: drop-shadow(0 0 8px rgba(255,182,193,0.5));">
+    Welcome to my magical space 🌸
+  </text>
+</svg>
