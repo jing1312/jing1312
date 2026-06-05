@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://github.com/jing1312">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jing1312&theme=radical&hide_border=true" alt="streak stats" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=jing1312&theme=synthwave&hide_border=true" alt="streak stats" />
   </a>
 </p>
 
