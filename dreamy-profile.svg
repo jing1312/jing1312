@@ -1,0 +1,504 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- 配色方案 - 梦幻紫粉 -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0015"/>
+      <stop offset="30%" style="stop-color:#1a0533"/>
+      <stop offset="70%" style="stop-color:#2d1b69"/>
+      <stop offset="100%" style="stop-color:#0a0015"/>
+    </linearGradient>
+    
+    <linearGradient id="islandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6C1"/>
+      <stop offset="25%" style="stop-color:#87CEEB"/>
+      <stop offset="50%" style="stop-color:#DDA0DD"/>
+      <stop offset="75%" style="stop-color:#98D8C8"/>
+      <stop offset="100%" style="stop-color:#FFB6C1"/>
+    </linearGradient>
+    
+    <linearGradient id="castleGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#DDA0DD"/>
+    </linearGradient>
+    
+    <linearGradient id="waterfall" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,182,193,0.6)"/>
+      <stop offset="50%" style="stop-color:rgba(135,206,235,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(221,160,221,0.2)"/>
+    </linearGradient>
+    
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(255,255,200,0.8)"/>
+      <stop offset="50%" style="stop-color:rgba(255,255,200,0.2)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,200,0)"/>
+    </radialGradient>
+    
+    <radialGradient id="firefly" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(255,255,100,0.9)"/>
+      <stop offset="50%" style="stop-color:rgba(200,255,100,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(200,255,100,0)"/>
+    </radialGradient>
+    
+    <radialGradient id="crystalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(168,85,247,0.8)"/>
+      <stop offset="50%" style="stop-color:rgba(168,85,247,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(168,85,247,0)"/>
+    </radialGradient>
+    
+    <radialGradient id="gemGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.9)"/>
+      <stop offset="50%" style="stop-color:rgba(255,255,255,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0)"/>
+    </radialGradient>
+    
+    <linearGradient id="meteorTail1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0)"/>
+      <stop offset="40%" style="stop-color:rgba(255,255,255,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,1)"/>
+    </linearGradient>
+    
+    <linearGradient id="meteorTail2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,182,193,0)"/>
+      <stop offset="40%" style="stop-color:rgba(255,182,193,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(255,182,193,1)"/>
+    </linearGradient>
+    
+    <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d"/>
+      <stop offset="100%" style="stop-color:#ff69b4"/>
+    </linearGradient>
+    
+    <linearGradient id="balloonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e"/>
+      <stop offset="100%" style="stop-color:#fecfef"/>
+    </linearGradient>
+    
+    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff6b9d"/>
+      <stop offset="16%" style="stop-color:#ff9a9e"/>
+      <stop offset="33%" style="stop-color:#fecfef"/>
+      <stop offset="50%" style="stop-color:#87CEEB"/>
+      <stop offset="66%" style="stop-color:#DDA0DD"/>
+      <stop offset="83%" style="stop-color:#98D8C8"/>
+      <stop offset="100%" style="stop-color:#ff6b9d"/>
+    </linearGradient>
+    
+    <linearGradient id="aurora" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b9d;stop-opacity:0.3"/>
+      <stop offset="25%" style="stop-color:#a855f7;stop-opacity:0.2"/>
+      <stop offset="50%" style="stop-color:#4ecdc4;stop-opacity:0.3"/>
+      <stop offset="75%" style="stop-color:#ff9a9e;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#DDA0DD;stop-opacity:0.3"/>
+    </linearGradient>
+    
+    <filter id="meteorGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="windowGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <style>
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      
+      @keyframes moon-glow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(255,255,200,0.3)); }
+        50% { filter: drop-shadow(0 0 25px rgba(255,255,200,0.8)); }
+      }
+      
+      @keyframes shooting-star-1 {
+        0% { transform: translate(-100px, -50px); opacity: 0; }
+        5% { opacity: 1; }
+        15% { opacity: 1; }
+        20% { transform: translate(400px, 200px); opacity: 0; }
+        100% { transform: translate(400px, 200px); opacity: 0; }
+      }
+      
+      @keyframes shooting-star-2 {
+        0% { transform: translate(-100px, -50px); opacity: 0; }
+        40% { opacity: 0; }
+        45% { opacity: 1; }
+        55% { opacity: 1; }
+        60% { transform: translate(500px, 250px); opacity: 0; }
+        100% { transform: translate(500px, 250px); opacity: 0; }
+      }
+      
+      @keyframes cloud-drift-right {
+        0% { transform: translateX(-150px); }
+        100% { transform: translateX(950px); }
+      }
+      
+      @keyframes cloud-drift-left {
+        0% { transform: translateX(950px); }
+        100% { transform: translateX(-150px); }
+      }
+      
+      @keyframes float-around {
+        0% { transform: translate(0, 0); opacity: 0.6; }
+        25% { transform: translate(30px, -20px); opacity: 0.9; }
+        50% { transform: translate(-20px, 10px); opacity: 0.5; }
+        75% { transform: translate(15px, 25px); opacity: 0.8; }
+        100% { transform: translate(0, 0); opacity: 0.6; }
+      }
+      
+      @keyframes heart-float {
+        0% { transform: translateY(0) scale(0.8); opacity: 0.8; }
+        50% { transform: translateY(-30px) scale(1); opacity: 0.6; }
+        100% { transform: translateY(-60px) scale(0.8); opacity: 0; }
+      }
+      
+      @keyframes note-float {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+        50% { transform: translateY(-80px) rotate(15deg); opacity: 0.6; }
+        100% { transform: translateY(-160px) rotate(-10deg); opacity: 0; }
+      }
+      
+      @keyframes firefly-glow {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        25% { opacity: 0.9; transform: scale(1.2); }
+        50% { opacity: 0.3; transform: scale(0.9); }
+        75% { opacity: 1; transform: scale(1.3); }
+      }
+      
+      @keyframes balloon-float {
+        0% { transform: translateY(10px) translateX(0); }
+        25% { transform: translateY(-15px) translateX(10px); }
+        50% { transform: translateY(5px) translateX(-5px); }
+        75% { transform: translateY(-10px) translateX(8px); }
+        100% { transform: translateY(10px) translateX(0); }
+      }
+      
+      @keyframes fall-down {
+        0% { transform: translateY(-30px) rotate(0deg) scale(0.8); opacity: 0; }
+        10% { opacity: 0.9; }
+        90% { opacity: 0.7; }
+        100% { transform: translateY(630px) rotate(360deg) scale(0.6); opacity: 0; }
+      }
+      
+      @keyframes rainbow-appear {
+        0%, 100% { opacity: 0; }
+        20%, 80% { opacity: 0.6; }
+      }
+      
+      @keyframes aurora-flow {
+        0% { transform: translateX(-100px); opacity: 0.3; }
+        50% { transform: translateX(100px); opacity: 0.6; }
+        100% { transform: translateX(-100px); opacity: 0.3; }
+      }
+      
+      @keyframes crystal-rotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes gem-sparkle {
+        0%, 100% { opacity: 0.5; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+      
+      @keyframes flag-wave {
+        0%, 100% { transform: skewX(0deg); }
+        25% { transform: skewX(5deg); }
+        75% { transform: skewX(-5deg); }
+      }
+      
+      @keyframes window-glow {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 1; }
+      }
+      
+      @keyframes ferris-wheel {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      @keyframes mask-float {
+        0% { transform: translateY(0) rotate(-5deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+        100% { transform: translateY(0) rotate(-5deg); }
+      }
+      
+      .star { animation: twinkle ease-in-out infinite; }
+      .moon { animation: moon-glow ease-in-out infinite; }
+      .meteor-1 { animation: shooting-star-1 6s linear infinite; }
+      .meteor-2 { animation: shooting-star-2 8s linear infinite; }
+      .cloud-right { animation: cloud-drift-right linear infinite; }
+      .cloud-left { animation: cloud-drift-left linear infinite; }
+      .sparkle { animation: float-around ease-in-out infinite; }
+      .heart { animation: heart-float ease-in-out infinite; }
+      .note { animation: note-float ease-in-out infinite; }
+      .firefly { animation: firefly-glow ease-in-out infinite; }
+      .balloon { animation: balloon-float ease-in-out infinite; }
+      .petal { animation: fall-down linear infinite; }
+      .rainbow { animation: rainbow-appear ease-in-out infinite; }
+      .aurora { animation: aurora-flow ease-in-out infinite; }
+      .crystal { animation: crystal-rotate linear infinite; }
+      .gem { animation: gem-sparkle ease-in-out infinite; }
+      .flag { animation: flag-wave ease-in-out infinite; }
+      .window-glow { animation: window-glow ease-in-out infinite; }
+      .ferris { animation: ferris-wheel linear infinite; }
+      .mask { animation: mask-float ease-in-out infinite; }
+    </style>
+  </defs>
+  
+  <!-- 天空背景 -->
+  <rect width="800" height="600" fill="url(#skyGrad)"/>
+  
+  <!-- 极光效果 -->
+  <path d="M0,50 Q200,20 400,60 Q600,100 800,40" 
+        stroke="url(#aurora)" stroke-width="30" fill="none" 
+        class="aurora" style="animation-duration: 8s;"/>
+  <path d="M0,80 Q200,50 400,90 Q600,130 800,70" 
+        stroke="url(#aurora)" stroke-width="20" fill="none" 
+        class="aurora" style="animation-duration: 10s; animation-delay: 2s;"/>
+  
+  <!-- 彩虹 -->
+  <path d="M100,200 Q400,50 700,200" 
+        stroke="url(#rainbow)" stroke-width="8" fill="none" 
+        class="rainbow" style="animation-duration: 12s;"/>
+  
+  <!-- 星星 -->
+  <polygon points="50,30 53,40 63,40 55,46 58,56 50,50 42,56 45,46 37,40 47,40" fill="#ffd700" class="star" style="animation-duration: 2s;"/>
+  <polygon points="150,50 153,60 163,60 155,66 158,76 150,70 142,76 145,66 137,60 147,60" fill="#ffffff" class="star" style="animation-duration: 1.5s; animation-delay: 0.5s;"/>
+  <polygon points="250,25 253,35 263,35 255,41 258,51 250,45 242,51 245,41 237,35 247,35" fill="#ffd700" class="star" style="animation-duration: 2.5s; animation-delay: 1s;"/>
+  <polygon points="350,45 353,55 363,55 355,61 358,71 350,65 342,71 345,61 337,55 347,55" fill="#ffffff" class="star" style="animation-duration: 1.8s; animation-delay: 0.3s;"/>
+  <polygon points="450,70 453,80 463,80 455,86 458,96 450,90 442,96 445,86 437,80 447,80" fill="#ffd700" class="star" style="animation-duration: 2.2s; animation-delay: 1.5s;"/>
+  <polygon points="550,35 553,45 563,45 555,51 558,61 550,55 542,61 545,51 537,45 547,45" fill="#ffffff" class="star" style="animation-duration: 1.7s; animation-delay: 0.8s;"/>
+  <polygon points="650,55 653,65 663,65 655,71 658,81 650,75 642,81 645,71 637,65 647,65" fill="#ffd700" class="star" style="animation-duration: 2.1s; animation-delay: 0.2s;"/>
+  <polygon points="750,30 753,40 763,40 755,46 758,56 750,50 742,56 745,46 737,40 747,40" fill="#ffffff" class="star" style="animation-duration: 1.9s; animation-delay: 1.2s;"/>
+  
+  <!-- 月亮 -->
+  <circle cx="700" cy="80" r="35" fill="#fffde7" class="moon"/>
+  <circle cx="700" cy="80" r="50" fill="url(#moonGlow)" opacity="0.3"/>
+  <circle cx="690" cy="70" r="8" fill="#0a0015" opacity="0.3"/>
+  <circle cx="710" cy="85" r="5" fill="#0a0015" opacity="0.2"/>
+  
+  <!-- 流星 -->
+  <g class="meteor-1" filter="url(#meteorGlow)">
+    <path d="M50,20 Q100,30 150,40 Q200,50 250,60" 
+          stroke="url(#meteorTail1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="250" cy="60" r="4" fill="#ffffff"/>
+    <circle cx="250" cy="60" r="8" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <g class="meteor-2" filter="url(#meteorGlow)">
+    <path d="M300,10 Q350,25 400,40 Q450,55 500,70" 
+          stroke="url(#meteorTail2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="500" cy="70" r="3.5" fill="#ffb6c1"/>
+    <circle cx="500" cy="70" r="7" fill="rgba(255,182,193,0.3)"/>
+  </g>
+  
+  <!-- 云朵 -->
+  <g class="cloud-right" style="animation-duration: 35s;">
+    <ellipse cx="100" cy="200" rx="80" ry="25" fill="rgba(255,255,255,0.08)"/>
+    <ellipse cx="140" cy="190" rx="50" ry="18" fill="rgba(255,255,255,0.06)"/>
+  </g>
+  
+  <g class="cloud-left" style="animation-duration: 40s; animation-delay: 5s;">
+    <ellipse cx="700" cy="180" rx="90" ry="28" fill="rgba(255,182,193,0.06)"/>
+    <ellipse cx="740" cy="170" rx="55" ry="20" fill="rgba(255,182,193,0.05)"/>
+  </g>
+  
+  <g class="cloud-right" style="animation-duration: 30s; animation-delay: 10s;">
+    <ellipse cx="400" cy="150" rx="70" ry="22" fill="rgba(168,85,247,0.06)"/>
+    <ellipse cx="430" cy="140" rx="45" ry="16" fill="rgba(168,85,247,0.05)"/>
+  </g>
+  
+  <!-- 浮空岛屿主体 -->
+  <path d="M150,350 
+           C180,320 220,300 260,310 
+           C300,320 330,290 370,280 
+           C410,270 440,280 470,290 
+           C500,300 530,280 560,290 
+           C590,300 620,310 650,330 
+           C680,350 700,360 720,380 
+           L720,420 
+           C700,415 660,410 620,415 
+           C580,420 540,415 500,420 
+           C460,425 420,420 380,425 
+           C340,430 300,425 260,430 
+           C220,435 180,430 150,420 
+           L150,350 Z" 
+        fill="url(#islandGrad)" 
+        stroke="rgba(168,85,247,0.3)" 
+        stroke-width="2"/>
+  
+  <!-- 岛屿底部 -->
+  <path d="M180,420 
+           C200,440 230,460 260,470 
+           C290,480 310,490 340,495 
+           C370,500 390,505 420,500 
+           C450,495 470,490 500,480 
+           C530,470 550,460 580,450 
+           C610,440 630,430 650,420 
+           L720,420 
+           C700,430 660,450 620,470 
+           C580,490 540,505 500,515 
+           C460,525 420,530 380,525 
+           C340,520 300,510 260,495 
+           C220,480 190,460 180,440 
+           L180,420 Z" 
+        fill="#87CEEB" 
+        opacity="0.6"/>
+  
+  <!-- 瀑布 -->
+  <g style="animation: waterfall-flow 2s linear infinite;">
+    <path d="M380,425 Q385,440 390,455 Q395,470 388,490 Q382,510 385,530" 
+          stroke="url(#waterfall)" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M390,425 Q395,445 400,465 Q405,485 398,505 Q392,525 395,545" 
+          stroke="url(#waterfall)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.4"/>
+  </g>
+  
+  <!-- 城堡 -->
+  <g opacity="0.8">
+    <!-- 主塔 -->
+    <rect x="380" y="250" width="40" height="100" fill="url(#castleGrad)" rx="2"/>
+    <polygon points="380,250 400,225 420,250" fill="#DDA0DD"/>
+    <line x1="400" y1="225" x2="400" y2="210" stroke="#ff69b4" stroke-width="2"/>
+    <polygon points="400,210 415,215 400,220" fill="#ff69b4" class="flag"/>
+    
+    <!-- 左塔 -->
+    <rect x="340" y="270" width="30" height="80" fill="url(#castleGrad)" rx="2"/>
+    <polygon points="340,270 355,250 370,270" fill="#DDA0DD"/>
+    <line x1="355" y1="250" x2="355" y2="235" stroke="#ff69b4" stroke-width="2"/>
+    <polygon points="355,235 370,240 355,245" fill="#ff69b4" class="flag"/>
+    
+    <!-- 右塔 -->
+    <rect x="430" y="270" width="30" height="80" fill="url(#castleGrad)" rx="2"/>
+    <polygon points="430,270 445,250 460,270" fill="#DDA0DD"/>
+    <line x1="445" y1="250" x2="445" y2="235" stroke="#ff69b4" stroke-width="2"/>
+    <polygon points="445,235 460,240 445,245" fill="#ff69b4" class="flag"/>
+    
+    <!-- 城堡主体 -->
+    <rect x="350" y="330" width="100" height="20" fill="url(#castleGrad)" rx="2"/>
+    
+    <!-- 发光窗户 -->
+    <rect x="390" y="280" width="15" height="20" fill="rgba(255,255,200,0.8)" rx="7 7 0 0" class="window-glow" filter="url(#windowGlow)"/>
+    <rect x="350" y="290" width="12" height="15" fill="rgba(255,255,200,0.7)" rx="6 6 0 0" class="window-glow" style="animation-delay: 0.5s;" filter="url(#windowGlow)"/>
+    <rect x="440" y="290" width="12" height="15" fill="rgba(255,255,200,0.7)" rx="6 6 0 0" class="window-glow" style="animation-delay: 1s;" filter="url(#windowGlow)"/>
+    
+    <!-- 门 -->
+    <rect x="385" y="335" width="30" height="15" fill="#1a0533" rx="15 15 0 0"/>
+  </g>
+  
+  <!-- 樱花树 -->
+  <g transform="translate(250, 300)">
+    <!-- 树干 -->
+    <path d="M0,100 Q5,50 0,0 Q-5,50 0,100" fill="#8B4513" opacity="0.8"/>
+    <!-- 树枝 -->
+    <path d="M0,60 Q-30,40 -50,50" fill="none" stroke="#8B4513" stroke-width="3" opacity="0.7"/>
+    <path d="M0,40 Q30,20 50,30" fill="none" stroke="#8B4513" stroke-width="3" opacity="0.7"/>
+    <!-- 花朵 -->
+    <circle cx="-50" cy="50" r="8" fill="#ffb6c1" opacity="0.8"/>
+    <circle cx="-45" cy="45" r="6" fill="#ff69b4" opacity="0.7"/>
+    <circle cx="-55" cy="55" r="5" fill="#ffc0cb" opacity="0.9"/>
+    <circle cx="50" cy="30" r="8" fill="#ffb6c1" opacity="0.8"/>
+    <circle cx="55" cy="25" r="6" fill="#ff69b4" opacity="0.7"/>
+    <circle cx="45" cy="35" r="5" fill="#ffc0cb" opacity="0.9"/>
+    <circle cx="0" cy="10" r="10" fill="#ffb6c1" opacity="0.9"/>
+    <circle cx="5" cy="5" r="7" fill="#ff69b4" opacity="0.8"/>
+    <circle cx="-5" cy="15" r="6" fill="#ffc0cb" opacity="0.7"/>
+  </g>
+  
+  <!-- 摩天轮 -->
+  <g transform="translate(600, 280)">
+    <!-- 支架 -->
+    <line x1="0" y1="0" x2="0" y2="80" stroke="#87CEEB" stroke-width="4" opacity="0.6"/>
+    <line x1="-40" y1="80" x2="40" y2="80" stroke="#87CEEB" stroke-width="3" opacity="0.5"/>
+    <!-- 轮子 -->
+    <g class="ferris" style="animation-duration: 20s; transform-origin: 0 0;">
+      <circle cx="0" cy="0" r="40" fill="none" stroke="#DDA0DD" stroke-width="3" opacity="0.6"/>
+      <!-- 车厢 -->
+      <rect x="-8" y="-48" width="16" height="12" fill="#ff9a9e" rx="3" opacity="0.8"/>
+      <rect x="-8" y="36" width="16" height="12" fill="#a18cd1" rx="3" opacity="0.8"/>
+      <rect x="-48" y="-8" width="12" height="16" fill="#87CEEB" rx="3" opacity="0.8"/>
+      <rect x="36" y="-8" width="12" height="16" fill="#98D8C8" rx="3" opacity="0.8"/>
+    </g>
+  </g>
+  
+  <!-- 水晶球 -->
+  <g transform="translate(150, 250)">
+    <circle cx="0" cy="0" r="25" fill="rgba(168,85,247,0.3)" stroke="rgba(168,85,247,0.5)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="url(#crystalGlow)" class="crystal" style="animation-duration: 10s;"/>
+    <circle cx="-5" cy="-5" r="5" fill="rgba(255,255,255,0.6)"/>
+  </g>
+  
+  <!-- 宝石 -->
+  <g class="gem" style="animation-duration: 3s;">
+    <polygon points="300,200 310,190 320,200 310,210" fill="#ff6b9d" opacity="0.8"/>
+    <polygon points="300,200 310,190 320,200" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <g class="gem" style="animation-duration: 4s; animation-delay: 1s;">
+    <polygon points="500,220 510,210 520,220 510,230" fill="#4ecdc4" opacity="0.8"/>
+    <polygon points="500,220 510,210 520,220" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <!-- 独角兽剪影 -->
+  <g transform="translate(450, 280)" opacity="0.6">
+    <path d="M0,0 Q10,-20 20,-10 Q30,0 25,20 L20,30 Q15,25 10,30 L5,20 Z" fill="#DDA0DD"/>
+    <path d="M20,-10 L25,-25 L30,-10" fill="#ff69b4"/>
+    <circle cx="15" cy="10" r="2" fill="#1a0533"/>
+  </g>
+  
+  <!-- 面具 -->
+  <g class="mask" style="animation-duration: 6s;">
+    <path d="M680,200 Q690,180 700,200 Q710,180 720,200 Q720,220 700,230 Q680,220 680,200" fill="#DDA0DD" opacity="0.7"/>
+    <circle cx="690" cy="200" r="8" fill="#1a0533"/>
+    <circle cx="710" cy="200" r="8" fill="#1a0533"/>
+    <path d="M690,210 Q700,220 710,210" fill="none" stroke="#1a0533" stroke-width="2"/>
+  </g>
+  
+  <!-- 热气球 -->
+  <g class="balloon" style="animation-duration: 8s;">
+    <ellipse cx="200" cy="150" rx="25" ry="30" fill="url(#balloonGrad)" opacity="0.8"/>
+    <line x1="190" y1="180" x2="195" y2="200" stroke="#ffb6c1" stroke-width="1"/>
+    <line x1="210" y1="180" x2="205" y2="200" stroke="#ffb6c1" stroke-width="1"/>
+    <rect x="190" y="200" width="20" height="12" fill="#ffb6c1" rx="2" opacity="0.7"/>
+  </g>
+  
+  <!-- 爱心 -->
+  <path d="M250,250 C250,240 260,235 265,245 C270,235 280,240 280,250 C280,260 265,270 265,270 C265,270 250,260 250,250Z" 
+        fill="url(#heartGrad)" class="heart" style="animation-duration: 6s;"/>
+  <path d="M520,230 C520,220 530,215 535,225 C540,215 550,220 550,230 C550,240 535,250 535,250 C535,250 520,240 520,230Z" 
+        fill="#ff69b4" class="heart" style="animation-duration: 5s; animation-delay: 1s;"/>
+  
+  <!-- 音符 -->
+  <g class="note" style="animation-duration: 4s;">
+    <circle cx="350" cy="200" r="5" fill="#ffd700" opacity="0.7"/>
+    <line x1="355" y1="200" x2="355" y2="180" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+    <path d="M355,180 Q365,175 362,183" fill="none" stroke="#ffd700" stroke-width="1.5" opacity="0.7"/>
+  </g>
+  
+  <!-- 萤火虫 -->
+  <circle cx="280" cy="300" r="4" fill="url(#firefly)" class="firefly" style="animation-duration: 3s;"/>
+  <circle cx="400" cy="280" r="3" fill="url(#firefly)" class="firefly" style="animation-duration: 2.5s; animation-delay: 0.5s;"/>
+  <circle cx="500" cy="310" r="4" fill="url(#firefly)" class="firefly" style="animation-duration: 3.5s; animation-delay: 1s;"/>
+  <circle cx="350" cy="320" r="3" fill="url(#firefly)" class="firefly" style="animation-duration: 2.8s; animation-delay: 1.5s;"/>
+  
+  <!-- 花瓣 -->
+  <ellipse cx="200" cy="0" rx="8" ry="12" fill="#ffb6c1" opacity="0.8" class="petal" style="animation-duration: 8s;" transform="rotate(30, 200, 0)"/>
+  <ellipse cx="350" cy="0" rx="10" ry="14" fill="#ff69b4" opacity="0.7" class="petal" style="animation-duration: 10s; animation-delay: 2s;" transform="rotate(-20, 350, 0)"/>
+  <ellipse cx="500" cy="0" rx="7" ry="11" fill="#ffc0cb" opacity="0.9" class="petal" style="animation-duration: 9s; animation-delay: 1s;" transform="rotate(45, 500, 0)"/>
+  <ellipse cx="650" cy="0" rx="9" ry="13" fill="#ffb6c1" opacity="0.6" class="petal" style="animation-duration: 11s; animation-delay: 3s;" transform="rotate(-35, 650, 0)"/>
+  
+  <!-- 文字 -->
+  <text x="400" y="500" font-family="Georgia, serif" font-size="28" fill="#ffffff" text-anchor="middle" style="filter: drop-shadow(0 0 10px rgba(168,85,247,0.5));">
+    Hi there, I'm jing!
+  </text>
+  <text x="400" y="540" font-family="Georgia, serif" font-size="18" fill="#ffb6c1" text-anchor="middle" style="filter: drop-shadow(0 0 8px rgba(255,182,193,0.5));">
+    Welcome to my magical space ✨
+  </text>
+</svg>
