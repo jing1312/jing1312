@@ -1,20 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
-    <linearGradient id="islandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#6b3fa0"/>
-      <stop offset="50%" style="stop-color:#2d1b69"/>
-      <stop offset="100%" style="stop-color:#1a0533"/>
+    <linearGradient id="islandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB6C1"/>
+      <stop offset="25%" style="stop-color:#87CEEB"/>
+      <stop offset="50%" style="stop-color:#DDA0DD"/>
+      <stop offset="75%" style="stop-color:#98D8C8"/>
+      <stop offset="100%" style="stop-color:#FFB6C1"/>
     </linearGradient>
     
     <linearGradient id="waterfall" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:rgba(200,220,255,0.6)"/>
-      <stop offset="50%" style="stop-color:rgba(150,180,255,0.4)"/>
-      <stop offset="100%" style="stop-color:rgba(100,140,255,0.2)"/>
+      <stop offset="0%" style="stop-color:rgba(255,182,193,0.6)"/>
+      <stop offset="50%" style="stop-color:rgba(135,206,235,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(221,160,221,0.2)"/>
     </linearGradient>
     
     <linearGradient id="castleGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" style="stop-color:#1a0533"/>
-      <stop offset="100%" style="stop-color:#2d1b69"/>
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="100%" style="stop-color:#DDA0DD"/>
     </linearGradient>
     
     <linearGradient id="balloonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -190,7 +192,7 @@
            C340,450 300,440 260,425 
            C220,410 190,390 180,370 
            L180,350 Z" 
-        fill="#1a0533" 
+        fill="#87CEEB" 
         opacity="0.6"/>
   
   <!-- Waterfall -->
