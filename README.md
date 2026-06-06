@@ -4,7 +4,7 @@
   <img src="assets/dreamy-sky.svg" width="100%" />
 </p>
 
-<!-- 模块 2：梦幻岛 -->
+<!-- 模块 2：天空之城 -->
 <p align="center">
   <img src="assets/dreamy-island.svg" width="100%" />
 </p>
