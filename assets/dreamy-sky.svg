@@ -13,6 +13,32 @@
       <stop offset="100%" style="stop-color:rgba(255,255,200,0)"/>
     </radialGradient>
     
+    <linearGradient id="meteorTail1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0)"/>
+      <stop offset="40%" style="stop-color:rgba(255,255,255,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,1)"/>
+    </linearGradient>
+    
+    <linearGradient id="meteorTail2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,182,193,0)"/>
+      <stop offset="40%" style="stop-color:rgba(255,182,193,0.4)"/>
+      <stop offset="100%" style="stop-color:rgba(255,182,193,1)"/>
+    </linearGradient>
+    
+    <linearGradient id="meteorTail3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(168,85,247,0)"/>
+      <stop offset="40%" style="stop-color:rgba(168,85,247,0.3)"/>
+      <stop offset="100%" style="stop-color:rgba(168,85,247,1)"/>
+    </linearGradient>
+    
+    <filter id="meteorGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
     <style>
       @keyframes twinkle {
         0%, 100% { opacity: 0.3; transform: scale(0.8); }
@@ -24,11 +50,30 @@
         50% { filter: drop-shadow(0 0 25px rgba(255,255,200,0.8)); }
       }
       
-      @keyframes shooting-star {
-        0% { transform: translate(0, 0); opacity: 0; }
-        10% { opacity: 1; }
-        70% { opacity: 1; }
-        100% { transform: translate(300px, 150px); opacity: 0; }
+      @keyframes shooting-star-1 {
+        0% { transform: translate(-100px, -50px); opacity: 0; }
+        5% { opacity: 1; }
+        15% { opacity: 1; }
+        20% { transform: translate(400px, 200px); opacity: 0; }
+        100% { transform: translate(400px, 200px); opacity: 0; }
+      }
+      
+      @keyframes shooting-star-2 {
+        0% { transform: translate(-100px, -50px); opacity: 0; }
+        40% { opacity: 0; }
+        45% { opacity: 1; }
+        55% { opacity: 1; }
+        60% { transform: translate(500px, 250px); opacity: 0; }
+        100% { transform: translate(500px, 250px); opacity: 0; }
+      }
+      
+      @keyframes shooting-star-3 {
+        0% { transform: translate(-100px, -50px); opacity: 0; }
+        70% { opacity: 0; }
+        75% { opacity: 1; }
+        85% { opacity: 1; }
+        90% { transform: translate(350px, 175px); opacity: 0; }
+        100% { transform: translate(350px, 175px); opacity: 0; }
       }
       
       @keyframes cloud-drift {
@@ -44,8 +89,16 @@
         animation: moon-glow ease-in-out infinite;
       }
       
-      .shooting-star {
-        animation: shooting-star linear infinite;
+      .meteor-1 {
+        animation: shooting-star-1 6s linear infinite;
+      }
+      
+      .meteor-2 {
+        animation: shooting-star-2 8s linear infinite;
+      }
+      
+      .meteor-3 {
+        animation: shooting-star-3 7s linear infinite;
       }
       
       .cloud {
@@ -73,10 +126,30 @@
   <circle cx="690" cy="70" r="8" fill="#0a0015" opacity="0.3"/>
   <circle cx="710" cy="85" r="5" fill="#0a0015" opacity="0.2"/>
   
-  <!-- Shooting stars -->
-  <line x1="100" y1="50" x2="130" y2="55" stroke="#ffffff" stroke-width="2" stroke-linecap="round" class="shooting-star" style="animation-duration: 3s; animation-delay: 0s;"/>
-  <line x1="400" y1="80" x2="430" y2="85" stroke="#ffb6c1" stroke-width="2" stroke-linecap="round" class="shooting-star" style="animation-duration: 4s; animation-delay: 2s;"/>
-  <line x1="600" y1="30" x2="630" y2="35" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" class="shooting-star" style="animation-duration: 3.5s; animation-delay: 1s;"/>
+  <!-- Shooting stars with tails -->
+  <!-- Meteor 1: White with glow -->
+  <g class="meteor-1" filter="url(#meteorGlow)">
+    <path d="M50,20 Q100,30 150,40 Q200,50 250,60" 
+          stroke="url(#meteorTail1)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="250" cy="60" r="4" fill="#ffffff"/>
+    <circle cx="250" cy="60" r="8" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <!-- Meteor 2: Pink with glow -->
+  <g class="meteor-2" filter="url(#meteorGlow)">
+    <path d="M300,10 Q350,25 400,40 Q450,55 500,70" 
+          stroke="url(#meteorTail2)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="500" cy="70" r="3.5" fill="#ffb6c1"/>
+    <circle cx="500" cy="70" r="7" fill="rgba(255,182,193,0.3)"/>
+  </g>
+  
+  <!-- Meteor 3: Purple with glow -->
+  <g class="meteor-3" filter="url(#meteorGlow)">
+    <path d="M550,30 Q600,45 650,60 Q700,75 750,90" 
+          stroke="url(#meteorTail3)" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <circle cx="750" cy="90" r="3" fill="#a855f7"/>
+    <circle cx="750" cy="90" r="6" fill="rgba(168,85,247,0.3)"/>
+  </g>
   
   <!-- Clouds -->
   <g class="cloud" style="animation-duration: 25s; animation-delay: 0s;">
