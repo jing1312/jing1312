@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 100" width="800" height="100">
+  <defs>
+    <linearGradient id="textBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0533"/>
+      <stop offset="50%" style="stop-color:#2d1b69"/>
+      <stop offset="100%" style="stop-color:#1a0533"/>
+    </linearGradient>
+    
+    <style>
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; transform: scale(0.8); }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+      
+      .star {
+        animation: twinkle ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="100" fill="url(#textBg)"/>
+  
+  <!-- Decorative stars -->
+  <polygon points="50,50 53,60 63,60 55,66 58,76 50,70 42,76 45,66 37,60 47,60" fill="#ffd700" class="star" style="animation-duration: 2s;"/>
+  <polygon points="750,50 753,60 763,60 755,66 758,76 750,70 742,76 745,66 737,60 747,60" fill="#ffd700" class="star" style="animation-duration: 2s; animation-delay: 0.5s;"/>
+  
+  <!-- Text -->
+  <text x="400" y="45" font-family="Georgia, serif" font-size="24" fill="#ffffff" text-anchor="middle" style="filter: drop-shadow(0 0 10px rgba(168,85,247,0.5));">
+    Hi there, I'm jing!
+  </text>
+  <text x="400" y="75" font-family="Georgia, serif" font-size="16" fill="#ffb6c1" text-anchor="middle" style="filter: drop-shadow(0 0 8px rgba(255,182,193,0.5));">
+    Welcome to my magical space ✨
+  </text>
+</svg>
